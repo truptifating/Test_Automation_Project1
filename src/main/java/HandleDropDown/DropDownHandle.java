@@ -16,6 +16,7 @@ public class DropDownHandle
 	  System.setProperty("webdriver.gecko.driver", "/home/vishnu/Documents/Trupti_Test_Automation/New_Automation_Scripts/Test_Automation_Project_1/geckodriver");  
 	  WebDriver driver = new FirefoxDriver();
 //	  driver.manage().deleteAllCookies();
+	  driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 	  driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
       driver.get("https://www.facebook.com/");
       

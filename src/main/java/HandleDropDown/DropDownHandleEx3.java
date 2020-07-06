@@ -16,7 +16,8 @@ public class DropDownHandleEx3
 	{
 		  System.setProperty("webdriver.gecko.driver", "/home/vishnu/Documents/Trupti_Test_Automation/New_Automation_Scripts/Test_Automation_Project_1/geckodriver");  
 		  WebDriver driver = new FirefoxDriver();
-		  driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
+		  driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	      driver.get("https://www.facebook.com/");
 	      
 	      WebElement Day= driver.findElement(By.id("day"));
@@ -31,17 +32,17 @@ public class DropDownHandleEx3
 	      List<WebElement> listDays=select.getOptions();       // to give the list of all options in Dropdown
 	      System.out.println(listDays.size());                 // It will give 32 value including that which is by default selected
 	      int TotalDays= listDays.size()-1;  
-	      System.out.println("Total Days in Month are" +TotalDays);
+	      System.out.println("Total Days in Month are " +TotalDays);
 	      
 	      //Printing all the values from dropdown
 	      
 	      for(int i=0; i<listDays.size();i++) 
 	      {
-	    	  String DayValue= listDays.get(i).getText();
+	    	  String DayValue= listDays.get(i).getText(); // Every value we get from WebPage while automating is string value and not int
 	    	  System.out.println("Day=" +DayValue);
-	      }
-	      
-	      
+	    	  
+	    	  
+	      }	      	      
 	     
 	}
 
