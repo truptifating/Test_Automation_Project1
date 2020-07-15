@@ -12,11 +12,11 @@ public class SendEmail {
 		Email email = new SimpleEmail();
 		email.setHostName("smtp.gmail.com");
 		email.setSmtpPort(465);
-		email.setAuthenticator(new DefaultAuthenticator("truptifating@gmail.com", "password"));
+		email.setAuthenticator(new DefaultAuthenticator("truptifating@gmail.com", "Mihurani17@"));
 		email.setSSLOnConnect(true);
 		email.setFrom("truptifating@gmail.com");
-		email.setSubject("TestMail");
-		email.setMsg("This is a test mail ... :-)");
+		email.setSubject("Automating the Test Mail by Trupti from Selenium Webdriver");
+		email.setMsg("This is a test mail from Code written on Eclipse by Trupti... :-)");
 		email.addTo("truptifating@gmail.com");
 		email.send();
 		System.out.println("Email Sent");
