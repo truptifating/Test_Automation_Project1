@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.CapabilityType;
@@ -16,14 +17,16 @@ public class HandlingMultipleWindowDemo3 {
 	public static void main(String[] args) throws InterruptedException 
 	{
 		  //Setting the desired capabilities
-		   FirefoxProfile profile= new FirefoxProfile();		
-		   DesiredCapabilities caps= new DesiredCapabilities();
-		   caps.setCapability("marionette", true);
-		   caps.setCapability(FirefoxDriver.PROFILE, profile);
-		   caps.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
-		   
-		  System.setProperty("webdriver.gecko.driver", "/home/vishnu/Documents/Trupti_Test_Automation/New_Automation_Scripts/Test_Automation_Project_1/geckodriver");  
-		  WebDriver driver = new FirefoxDriver();
+//		   FirefoxProfile profile= new FirefoxProfile();		
+//		   DesiredCapabilities caps= new DesiredCapabilities();
+//		   caps.setCapability("marionette", true);
+//		   caps.setCapability(FirefoxDriver.PROFILE, profile);
+//		   caps.setCapability(CapabilityType.TAKES_SCREENSHOT, true);		   
+//		  System.setProperty("webdriver.gecko.driver", "/home/vishnu/Documents/Trupti_Test_Automation/New_Automation_Scripts/Test_Automation_Project_1/geckodriver");  
+//		  WebDriver driver = new FirefoxDriver();
+		
+		 System.setProperty("webdriver.chrome.driver", "E:\\Selenium Training\\Test_Automation_Project1\\chromedriver.exe");  
+		  WebDriver driver = new ChromeDriver();
 		  driver.manage().deleteAllCookies();
 		  driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);	
 		  driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);

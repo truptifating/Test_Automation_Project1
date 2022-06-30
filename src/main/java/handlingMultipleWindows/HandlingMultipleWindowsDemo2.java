@@ -7,14 +7,15 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class HandlingMultipleWindowsDemo2 {
 
 	public static void main(String[] args) throws InterruptedException 
 	{
-		System.setProperty("webdriver.gecko.driver", "/home/vishnu/Documents/Trupti_Test_Automation/New_Automation_Scripts/Test_Automation_Project_1/geckodriver");  
-		  WebDriver driver = new FirefoxDriver();
+		 System.setProperty("webdriver.chrome.driver", "E:\\Selenium Training\\Test_Automation_Project1\\chromedriver.exe");  
+		  WebDriver driver = new ChromeDriver();
 //		  driver.manage().deleteAllCookies();
 		  driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);	
 		  driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
