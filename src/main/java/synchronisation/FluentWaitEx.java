@@ -23,7 +23,7 @@
 //		       .pollingEvery(5, TimeUnit.SECONDS)
 //		       .ignoring(NoSuchElementException.class);
 //	 
-//			WebElement element = wait.until(new Function<WebDriver, WebElement>()
+//			WebElement element = wait.until(new Function<WebDriver, WebElement>())
 //			{
 //				public WebElement apply(WebDriver driver) 
 //				{
