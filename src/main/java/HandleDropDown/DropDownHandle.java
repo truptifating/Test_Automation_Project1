@@ -28,10 +28,10 @@ public class DropDownHandle
       /*Select select1= new Select(Day);
       select1.selectByVisibleText("2");s
       
-      Select select2= new Select(Day);
+      Select select2= new Select(Month);
       select2.selectByVisibleText("Mar");
       
-      Select select3= new Select(Day);
+      Select select3= new Select(Year);
       select3.selectByVisibleText("1994");*/
       
       selectValueFromDropDown(Day, "2");            

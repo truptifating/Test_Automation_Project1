@@ -22,6 +22,8 @@
 //		       .withTimeout(30, TimeUnit.SECONDS)
 //		       .pollingEvery(5, TimeUnit.SECONDS)
 //		       .ignoring(NoSuchElementException.class);
+
+//           wait.until(ExpectedConditions.alertIsPresent());
 //	 
 //			WebElement element = wait.until(new Function<WebDriver, WebElement>())
 //			{
