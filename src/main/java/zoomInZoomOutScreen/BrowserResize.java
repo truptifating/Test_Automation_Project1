@@ -10,7 +10,7 @@ public class BrowserResize {
 
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
-		Dimension d=new Dimension(500,900);
+		Dimension d=new Dimension(500,900);//size in pixel
 	//	driver.manage().window().setSize(d);
 
 	}

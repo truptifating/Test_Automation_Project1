@@ -10,14 +10,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class PermissionPopUps {
 
 	public static void main(String[] args) {
-		HashMap<String, Integer> conentSettings = new HashMap<String, Integer>();
+		HashMap<String, Integer> contentSettings = new HashMap<String, Integer>();
 		HashMap<String, Object> profile = new HashMap<String, Object>();
 		HashMap<String, Object> prefs = new HashMap<String, Object>();
 
-		conentSettings.put("notifications", 2);
-		conentSettings.put("geolocation", 2);
-		conentSettings.put("media_stream", 1);
-		profile.put("managed_default_content_settings", conentSettings);
+		contentSettings.put("notifications", 2);
+		contentSettings.put("geolocation", 2);
+		contentSettings.put("media_stream", 1);
+		profile.put("managed_default_content_settings", contentSettings);
 		prefs.put("profile", profile);
 
 		ChromeOptions options = new ChromeOptions();
